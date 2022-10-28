@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* body is a flex container for header, div.container, footer */
+
+header, main, nav, aside, footer {
+    padding: 20px;
+    border: 1px solid silver;
+}
+
+.container {
+   /* outline: 3px solid dodgerblue; */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* .container is a flex container for the nav, main, aside only */
+
+main {
+    flex-grow: 1;
+}
+
+header, footer {
+    margin: 10px 0;
+}
+
+/* Add mobile responsiveness */ 
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+}
